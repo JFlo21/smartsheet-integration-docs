@@ -1,0 +1,132 @@
+site_name: Smartsheet Integration Suite
+site_url: https://jflo21.github.io/smartsheet-integration-docs/
+site_description: Comprehensive documentation for Smartsheet integration repositories
+site_author: JFlo21
+repo_url: https://github.com/JFlo21/smartsheet-integration-docs
+repo_name: JFlo21/smartsheet-integration-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: red
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: red
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.tracking
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/JFlo21
+      name: JFlo21 on GitHub
+  generator: false
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Master Index: master-index.md
+      - Usage Guide: usage-guide.md
+  - Integration Details:
+      - Smartsheet Integration: smartsheet-integration.md
+      - Watch Out For: watch-out-for.md
+  - Maintenance:
+      - Maintenance Guide: maintenance-guide.md
+      - Troubleshooting: troubleshooting.md
+  - Repositories:
+      - Overview: repositories/index.md
+      - Supabase Smartsheet Promax Offload: repositories/supabase-smartsheet-promax-offload.md
+      - Smartsheet Supabase Sync: repositories/smartsheet-supabase-sync.md
+      - Master to Sibling Smartsheet: repositories/master-to-sibling-smartsheet-function.md
+      - Generate Job Numbers: repositories/generate-job-numbers.md
+      - Generate Weekly PDFs: repositories/generate-weekly-pdfs-dsr-resiliency.md
+      - Resiliency PDF Restructure: repositories/resiliency-pdf-restructure-ug-work.md
+
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+copyright: Copyright &copy; 2025 JFlo21 - Smartsheet Integration Suite

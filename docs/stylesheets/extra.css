@@ -1,0 +1,244 @@
+/* Custom styles for Smartsheet Integration Suite Documentation */
+
+/* Brand colors - Linetec inspired */
+:root {
+  --linetec-red: #C8102E;
+  --linetec-dark: #1a1a1a;
+  --linetec-gray: #6c757d;
+  --card-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  --card-hover-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Card styling for navigation and features */
+.md-typeset .card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.md-typeset .card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-2px);
+  border-color: var(--md-accent-fg-color);
+}
+
+.md-typeset .card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+/* Grid layout for cards */
+.md-typeset .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+/* Enhanced table styling */
+.md-typeset table {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.md-typeset table thead {
+  background: var(--md-primary-fg-color);
+  color: white;
+}
+
+.md-typeset table thead th {
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+}
+
+.md-typeset table tbody tr {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  transition: background-color 0.2s ease;
+}
+
+.md-typeset table tbody tr:hover {
+  background-color: var(--md-default-fg-color--lightest);
+}
+
+.md-typeset table tbody td {
+  padding: 12px 16px;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-active {
+  background-color: #28a745;
+  color: white;
+}
+
+.status-maintenance {
+  background-color: #ffc107;
+  color: #1a1a1a;
+}
+
+.status-deprecated {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status-beta {
+  background-color: #17a2b8;
+  color: white;
+}
+
+/* Language badges */
+.language-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.language-python {
+  background-color: #3776ab;
+  color: white;
+}
+
+.language-typescript {
+  background-color: #3178c6;
+  color: white;
+}
+
+.language-javascript {
+  background-color: #f7df1e;
+  color: #1a1a1a;
+}
+
+/* Code block enhancements */
+.md-typeset .highlight {
+  border-radius: 4px;
+  margin: 1.5rem 0;
+}
+
+.md-typeset pre {
+  border-radius: 4px;
+}
+
+/* Admonition customization */
+.md-typeset .admonition {
+  border-radius: 4px;
+  border-left-width: 4px;
+}
+
+.md-typeset .admonition.danger {
+  border-left-color: var(--linetec-red);
+}
+
+/* Quick reference tables */
+.quick-ref-table {
+  font-size: 0.9em;
+}
+
+.quick-ref-table td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Repository header styling */
+.repo-header {
+  background: linear-gradient(135deg, var(--md-primary-fg-color) 0%, var(--md-accent-fg-color) 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.repo-header h1 {
+  margin: 0 0 1rem 0;
+  color: white;
+}
+
+.repo-header .badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Architecture diagram styling */
+.architecture-diagram {
+  background: var(--md-code-bg-color);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Feature list styling */
+.md-typeset .feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.md-typeset .feature-list li {
+  padding-left: 2rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.md-typeset .feature-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--md-accent-fg-color);
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Environment variable tables */
+.env-var-table code {
+  background: var(--md-code-bg-color);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .md-typeset .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .repo-header {
+    padding: 1.5rem;
+  }
+  
+  .md-typeset table {
+    font-size: 0.9em;
+  }
+}
+
+/* Print styles */
+@media print {
+  .md-header,
+  .md-sidebar,
+  .md-footer {
+    display: none;
+  }
+  
+  .md-content {
+    margin: 0;
+  }
+}
